@@ -49,6 +49,6 @@ export const removeCategory = async (req, res) => {
 };
 
 export const showAddCategoryForm = (req, res) => {
-  res.render('addCategory'); // Ensure you have addCategory.ejs in your views folder
+  res.render('addCategory'); 
 };
 

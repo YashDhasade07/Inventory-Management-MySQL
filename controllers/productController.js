@@ -7,7 +7,7 @@ export const listProducts = async (req, res) => {
   const offset = (page - 1) * limit;
 
   const products = await getAllProducts(limit, offset);
-  const total = await countProducts(); // Add a function in the model for this.
+  const total = await countProducts();
   res.render('product', {
     products,
     currentPage: page,
@@ -23,7 +23,7 @@ export const addProduct = async (req, res) => {
 
 export const showEditProductForm = async (req, res) => {
   const { id } = req.params;
-  const product = await getProductById(id); // Add a function in the model for this.
+  const product = await getProductById(id);
   console.log(product);
   res.render('updateProduct', { product });
 };

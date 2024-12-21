@@ -4,7 +4,7 @@ import { listProducts, addProduct, showEditProductForm, editProduct, removeProdu
 const router = express.Router();
 
 router.get('/', listProducts);
-router.get('/create', showAddProductForm); // Route for displaying the Add Product form
+router.get('/create', showAddProductForm); 
 router.post('/create', addProduct);
 router.get('/edit/:id', showEditProductForm);
 router.post('/update/:id', editProduct);
